@@ -42,11 +42,11 @@ object Parser {
     val delta = value(jsonMap, "delta")
     val theta = value(jsonMap, "theta")
     val lowAlpha = value(jsonMap, "lowAlpha")
-    val highAlpha = value(jsonMap, "lowAlpha")
+    val highAlpha = value(jsonMap, "highAlpha")
     val lowBeta = value(jsonMap, "lowBeta")
     val highBeta = value(jsonMap, "highBeta")
     val lowGamma = value(jsonMap, "lowGamma")
-    val highGamma = value(jsonMap, "lowGamma")
+    val highGamma = value(jsonMap, "highGamma")
 
     EEGPower(delta, theta, lowAlpha, highAlpha, lowBeta, highBeta, lowGamma, highGamma)
   }
