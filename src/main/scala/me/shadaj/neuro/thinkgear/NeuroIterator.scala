@@ -15,6 +15,7 @@ class NeuroIterator(rawOutput: Boolean = false, jsonFormat: Boolean = true, host
   def configure(rawOutput: Boolean = false, jsonFormat: Boolean = true) {
     val jsonConfig = new JSONObject(Map("enableRawOutput" -> rawOutput,
       "format" -> (if (jsonFormat) "Json" else "BinaryPacket")))
+    println(jsonConfig.toString())
     neuroOutput.write(jsonConfig.toString())
     neuroOutput.flush()
   }
@@ -23,7 +24,5 @@ class NeuroIterator(rawOutput: Boolean = false, jsonFormat: Boolean = true, host
   
   def hasNext = true
   
-  def next = {
-    neuroInput.readLine
-  }
+  def next = neuroInput.readLine
 }
