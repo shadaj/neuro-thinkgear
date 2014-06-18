@@ -62,6 +62,4 @@ object Parser {
   def parsePoorSignal(jsonData: Map[String, Any]): PoorSignalLevel = {
     PoorSignalLevel(value(jsonData, "poorSignalLevel"))
   }
-  
-  implicit def convertToNeuroData(string: String): NeuroData = parse(string)
 }
